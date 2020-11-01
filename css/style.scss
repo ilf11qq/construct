@@ -85,3 +85,65 @@ body {
         }
     }
 }
+.story {
+    padding-top: 50px;
+    h2 {
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 150%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            border: 2px solid $styleColor;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 45%;
+        &--row {
+            flex-direction: row;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 27px;
+            span {
+                color: $styleColor;
+            }
+        }
+        p {
+            font-size: 13px;
+            line-height: 23px;
+            font-weight: normal;
+        }
+    }
+    &__idea {
+        p {
+            margin-top: -150%;
+            margin-left: 10%;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}
