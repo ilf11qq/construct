@@ -3,10 +3,15 @@
 $primaryColor: #48555B;
 $secondColor: #FFFFFF;
 $styleColor: #00A4E5;
+html {
+    scroll-behavior: smooth;
+}
 body {
     color: $primaryColor;
     font-size: 11px;
     font-family: 'Open Sans';
+    font-style: normal;
+    color: $primaryColor;
 }
 .container {
     height: 100%;
@@ -70,6 +75,10 @@ body {
         justify-content: space-between;
     }
     &__link {
+        &:hover {
+                color: $styleColor;
+                font-weight: bold;
+            }
         a {
             text-decoration: none;
             text-transform: uppercase;
@@ -78,10 +87,10 @@ body {
             line-height: 16px;
             letter-spacing: 1px;
             font-weight: 600;
-            &:hover {
-                color: $styleColor;
-                font-weight: bold;
-            }
+            // &:hover {
+            //     color: $styleColor;
+            //     font-weight: bold;
+            // }
         }
     }
 }
@@ -95,6 +104,7 @@ body {
         letter-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
+        margin-bottom: 50px;
         &::after {
             content: "";
             position: absolute;
@@ -134,16 +144,82 @@ body {
         }
     }
     &__idea {
+        position: relative;
         p {
-            margin-top: -150%;
-            margin-left: 10%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
             font-weight: 800;
             font-size: 24px;
             line-height: 29px;
             text-transform: uppercase;
+            color: $secondColor;
         }
         &:not(:last-child) {
             margin-right: 10px;
         }
+    }
+}
+.capabilities {
+    padding-top: 100px;
+    &__title {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 80px;
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1.38;
+            letter-spacing: 2.30625px;
+            text-transform: uppercase;
+            flex-basis: 25%;
+        }
+        p {
+            font-weight: normal;
+            font-size: 11px;
+            line-height: 1.72;
+            letter-spacing: 0.2px;
+            flex-basis: 50%;
+        }
+        a {
+            display: block;
+            background: $styleColor;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 1.38;
+            letter-spacing: 0.5px;
+            color: $secondColor;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            flex-basis: 25%;
+            padding: 9px 0px;
+        }
+    }
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 30%;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.426667px;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 1.77;
+        letter-spacing: 0.1875px;
     }
 }
