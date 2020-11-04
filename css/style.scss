@@ -88,6 +88,12 @@ body {
             line-height: 16px;
             letter-spacing: 1px;
             font-weight: 600;
+            padding-left: 1.2px;
+            &:hover {
+                font-weight: bold;
+                color: #00A4E5;
+                padding: 0px;
+            }
         }
     }
 }
@@ -241,6 +247,10 @@ body {
             text-decoration: none;
             max-width: 150px;
             padding: 11px 25px;
+            transition: .3s;
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -305,6 +315,10 @@ body {
         display: block;
         color: white;
         width: 150px;
+        transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 .signup {
